@@ -252,6 +252,7 @@ const CATEGORY_SOURCES = {
 };
 
 const CHANGELOG = [
+  {v:'2.1.1', en:'Fixed the map layers window shrinking and jumping to the top when toggling a switch near the bottom of the list.', it:'Corretto il bug per cui la finestra dei livelli della mappa si rimpiccioliva e saliva in alto attivando un interruttore in fondo all\'elenco.'},
   {v:'2.1.0',
    en:'GlobeWatch is now an installable app (PWA): add it to your home screen or desktop and it opens full screen with its own icon. The interface loads instantly from a local cache and, when you are offline, shows the last data it downloaded. Shortcuts for Conflicts and Disasters, an “Install app” entry in the menu and a friendly offline page are included.',
    it:'GlobeWatch è ora un\'app installabile (PWA): aggiungila alla schermata Home o al desktop e si apre a schermo intero con la sua icona. L\'interfaccia si carica subito da una cache locale e, quando sei offline, mostra gli ultimi dati scaricati. Inclusi scorciatoie per Conflitti e Disastri, la voce “Installa app” nel menu e una pagina offline dedicata.'},

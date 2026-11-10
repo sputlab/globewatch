@@ -257,7 +257,7 @@ a.feed-item:hover .t{color:var(--accent)}
 .modal-overlay.open{display:flex;animation:fade .18s ease}
 @keyframes fade{from{opacity:0}}
 .modal-card{position:relative;width:100%;max-width:480px;max-height:min(86vh,760px);display:flex;flex-direction:column;
-  border-radius:var(--r-xl);background:var(--glass-strong);overflow:hidden;animation:pop .2s var(--ease)}
+  border-radius:var(--r-xl);background:var(--glass-strong);overflow:hidden;overflow:clip;animation:pop .2s var(--ease)}
 .modal-card.wide{max-width:640px}
 .modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:22px 22px 6px;flex:none}
 .modal-head h2{margin:0;font-size:19px;font-weight:700;letter-spacing:-.02em}
@@ -293,13 +293,13 @@ details.older[open] summary::before{content:'– '}
 
 .layer-actions{display:flex;gap:6px;margin:0 0 4px}
 .layer-group h3{margin-top:18px}
-.layer-row{display:flex;align-items:center;gap:12px;padding:9px 10px;margin:0 -10px;border-radius:10px;cursor:pointer;font-size:13.5px}
+.layer-row{position:relative;display:flex;align-items:center;gap:12px;padding:9px 10px;margin:0 -10px;border-radius:10px;cursor:pointer;font-size:13.5px}
 .layer-row:hover{background:var(--surface)}
 .layer-row .ld{width:9px;height:9px;border-radius:50%;flex:none;background:var(--c)}
 .layer-row .ln{flex:1;min-width:0}
 .layer-row .lc{font:500 11.5px var(--mono);color:var(--ink-3)}
 .layer-row.empty .ln{color:var(--ink-3)}
-.layer-row input{position:absolute;opacity:0;pointer-events:none}
+.layer-row input{position:absolute;left:0;top:50%;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}   /* contained in its row: focusing it must never scroll the modal */
 .layer-row .sw{position:relative;width:34px;height:20px;border-radius:999px;background:var(--surface-3);border:1px solid var(--line-2);flex:none;transition:background .2s}
 .layer-row .sw::after{content:'';position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--ink-2);transition:transform .2s var(--ease),background .2s}
 .layer-row input:checked ~ .sw{background:rgba(244,181,68,.28);border-color:rgba(244,181,68,.55)}
