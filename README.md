@@ -104,6 +104,7 @@ HDX HAPI 6 h · UCDP 12 h. Override it with `SOURCE_TTL_OVERRIDES`.
 
 ## Changelog
 
+- **2.1.3** — Added the MIT license.
 - **2.1.2** — The PWA icon replaces the generic globe in the header, admin panel and favicon.
 - **2.1.1** — Fix: the map layers window no longer shrinks/jumps when toggling switches near the bottom of the list.
 - **2.1.0** — Progressive Web App: web manifest, service worker (offline shell and last-known data), offline page,
@@ -135,3 +136,7 @@ inserisci le credenziali del DB e `ADMIN_PANEL_PASSWORD`. Apri `admin.php` e pre
 Facoltativo: imposta `REFRESH_KEY` e un pinger gratuito su `api/refresh.php?key=…` ogni 5 minuti.
 
 `api/config.php` contiene password e chiavi: è escluso da git e non va mai condiviso.
+
+## License
+
+Released under the [MIT License](LICENSE).
