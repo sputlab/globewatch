@@ -192,7 +192,7 @@ $csrf = $authed ? gw_csrf_token() : '';
 <div class="wrap">
   <header class="top">
     <a class="brand" href="./">
-      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.6 2.8 3.9 5.8 3.9 9s-1.3 6.2-3.9 9c-2.6-2.8-3.9-5.8-3.9-9S9.4 5.8 12 3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      <span class="brand-mark" aria-hidden="true"><img src="assets/icons/icon-192.png" alt="" width="34" height="34"></span>
       <span><b>GlobeWatch</b><small><?= $h($t('title')) ?> · v<?= GW_VERSION ?></small></span>
     </a>
     <div class="top-actions">

@@ -31,7 +31,6 @@ $v = rawurlencode(GW_VERSION);
 <meta property="og:description" content="Live world map of armed conflicts, unrest, disasters and humanitarian emergencies from open data.">
 <title>GlobeWatch — Global events map</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <meta name="mobile-web-app-capable" content="yes">
@@ -85,7 +84,7 @@ $v = rawurlencode(GW_VERSION);
 
   <header class="panel-head">
     <div class="brand">
-      <span class="brand-mark" aria-hidden="true"><svg class="i"><use href="#i-globe"/></svg></span>
+      <span class="brand-mark" aria-hidden="true"><img src="assets/icons/icon-192.png" alt="" width="38" height="38"></span>
       <div class="brand-text">
         <div class="brand-name">GlobeWatch</div>
         <div class="brand-sub" data-i18n="appTitle">Global events map</div>

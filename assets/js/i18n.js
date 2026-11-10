@@ -252,6 +252,7 @@ const CATEGORY_SOURCES = {
 };
 
 const CHANGELOG = [
+  {v:'2.1.2', en:'The app now uses the PWA icon everywhere (header, admin panel, browser favicon) instead of the generic globe.', it:'L\'app ora usa ovunque l\'icona della PWA (intestazione, pannello admin, favicon del browser) al posto del globo generico.'},
   {v:'2.1.1', en:'Fixed the map layers window shrinking and jumping to the top when toggling a switch near the bottom of the list.', it:'Corretto il bug per cui la finestra dei livelli della mappa si rimpiccioliva e saliva in alto attivando un interruttore in fondo all\'elenco.'},
   {v:'2.1.0',
    en:'GlobeWatch is now an installable app (PWA): add it to your home screen or desktop and it opens full screen with its own icon. The interface loads instantly from a local cache and, when you are offline, shows the last data it downloaded. Shortcuts for Conflicts and Disasters, an “Install app” entry in the menu and a friendly offline page are included.',

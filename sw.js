@@ -6,7 +6,7 @@
    - map tiles, fonts and Leaflet from CDNs: stale-while-revalidate with a size cap
    - admin.php, diagnostics, refresh and every non-GET request: never touched.
    Bump VERSION on every release (tools/bump-version.sh does it) so old caches are dropped. */
-const VERSION = '2.1.1';
+const VERSION = '2.1.2';
 const SHELL = 'gw-shell-' + VERSION;
 const PAGES = 'gw-pages-' + VERSION;
 const API = 'gw-api-' + VERSION;
