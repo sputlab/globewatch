@@ -1,0 +1,4 @@
+# Installation files only: not served over the web.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>

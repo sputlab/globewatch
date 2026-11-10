@@ -1,0 +1,6 @@
+# Internal files are never served directly (Apache 2.4+). On nginx add an equivalent "deny" rule.
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(config\.php|config\.php\.example|version\.php|db\.php|lib\.php|schema\.php|sources\.php|sources_extra\.php|sources_v112\.php|builders\.php|countries\.php)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>

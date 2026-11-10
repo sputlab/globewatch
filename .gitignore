@@ -1,0 +1,12 @@
+# Local archive of old versions (never published)
+archive/
+
+# Secrets: the real configuration stays on the server only
+api/config.php
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

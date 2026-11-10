@@ -1,0 +1,78 @@
+<?php
+/*
+ * GlobeWatch — configuration template.
+ *
+ * Copy this file to api/config.php and fill it in.
+ * api/config.php is git-ignored: NEVER commit, share or zip it (it holds passwords and API keys).
+ *
+ * Every optional constant has a safe default in api/lib.php: keep only the lines you change.
+ */
+define('APP_NAME', 'GlobeWatch');
+
+/* ------------------------------------------------------------------ Database */
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'globewatch');
+define('DB_USER', 'globewatch');
+define('DB_PASS', 'change-me');
+
+/* ------------------------------------------------------------------ Admin panel (admin.php) + diagnostics */
+// Use a long, unique password (12+ characters). Empty = admin panel disabled.
+define('ADMIN_PANEL_PASSWORD', '');
+
+/* ------------------------------------------------------------------ Cache (stale-while-revalidate) */
+// Every source has its own freshness window. Expired data is served instantly and
+// refreshed AFTER the response has been sent. 0 = cache off (slow, not recommended).
+define('CACHE_TTL_SECONDS', 600);
+// Optional per-source override of the freshness window, in seconds:
+// define('SOURCE_TTL_OVERRIDES', ['usgs' => 120, 'gdacs' => 300]);
+define('BACKGROUND_BUDGET_SECONDS', 25);   // max seconds of background refresh after a response
+
+// Optional warm-up endpoint for a free external pinger (cron-job.org, UptimeRobot…):
+// https://your-site/api/refresh.php?key=THIS_VALUE every 5 minutes. Empty = disabled.
+// Generate one with: php -r "echo bin2hex(random_bytes(16));"
+define('REFRESH_KEY', '');
+
+/* ------------------------------------------------------------------ Network */
+define('HTTP_FORCE_IPV4', true);           // avoids connect timeouts on hosts with broken IPv6
+
+/* ------------------------------------------------------------------ Map basemap */
+// CARTO key (https://carto.com) — it is public by nature (it ends up in tile URLs):
+// restrict it to your domain in the CARTO dashboard. Empty = keyless legacy tiles.
+define('CARTO_API_KEY', '');
+
+/* ------------------------------------------------------------------ GDELT (no key) */
+// ~1 request every 5 s per IP: calls are serialized and spaced automatically.
+define('GDELT_MIN_INTERVAL', 6);
+define('GDELT_REFRESH_PER_RUN', 2);
+define('GDELT_BACKOFF_SECONDS', 1800);
+
+/* ------------------------------------------------------------------ Free keys (recommended) */
+// HDX HAPI (OCHA): no approval — conflict intensity, unrest, violence against civilians,
+// INFORM Risk and humanitarian context. The app_identifier is generated automatically.
+define('HAPI_APP_NAME', 'GlobeWatch');
+define('HAPI_EMAIL', '');
+// NASA FIRMS satellite fires: https://firms.modaps.eosdis.nasa.gov/api/map_key/
+define('FIRMS_MAP_KEY', '');
+// UCDP (yearly + monthly candidate events): https://ucdp.uu.se/apidocs/
+define('UCDP_TOKEN', '');
+define('UCDP_VERSION', '26.1');
+// ReliefWeb (OCHA) pre-approved appname: https://reliefweb.int/help/api
+define('RELIEFWEB_APPNAME', '');
+
+/* ------------------------------------------------------------------ Optional sources */
+define('IFRC_GO_TOKEN', '');               // optional, public events work without it
+define('ACAPS_TOKEN', '');                 // or username + password below (free account)
+define('ACAPS_USERNAME', '');
+define('ACAPS_PASSWORD', '');
+define('ALERTS_UA_TOKEN', '');             // https://devs.alerts.in.ua/
+define('CLOUDFLARE_RADAR_TOKEN', '');      // token with "Account › Radar › Read"
+define('IDMC_CLIENT_ID', '');              // IDMC API client id
+define('CAP_EXTRA_FEEDS', [
+    // 'AUS' => 'https://…',               // extra national CAP feeds (WMO register)
+]);
+define('FAO_LOCUST_LAYER_URL', '');        // empty = discovered automatically
+
+/* ------------------------------------------------------------------ ACLED (paid plan with API access) */
+define('ACLED_EMAIL', '');
+define('ACLED_PASSWORD', '');
+define('HISTORY_YEARS_BACK', 5);           // years of ACLED history the admin panel can archive

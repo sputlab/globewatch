@@ -1,0 +1,26 @@
+{
+  "name": "GlobeWatch — Global events map",
+  "short_name": "GlobeWatch",
+  "description": "Live world map of armed conflicts, unrest, disasters and humanitarian emergencies from open data.",
+  "id": "./",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#07090D",
+  "theme_color": "#07090D",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["news", "navigation", "utilities"],
+  "icons": [
+    {"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+    {"src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Conflicts", "short_name": "Conflicts", "url": "./?source=pwa-shortcut&tab=conflict", "icons": [{"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]},
+    {"name": "Natural disasters", "short_name": "Disasters", "url": "./?source=pwa-shortcut&tab=disaster", "icons": [{"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]}
+  ]
+}
